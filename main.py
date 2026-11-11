@@ -11,13 +11,7 @@ def afficher_menu():
     print("0. Quitter")
 
 
-def ajouter_tache():
-    titre = input("Titre de la tâche : ").strip()
-    if titre == "":
-        print("Erreur : le titre ne peut pas être vide.")
-    else:
-        taches.append(titre)
-        print("Tâche ajoutée avec succès.")
+
 
 
 def afficher_taches():
