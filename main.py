@@ -8,10 +8,17 @@ def afficher_menu():
     print("1. Ajouter une tâche")
     print("2. Afficher")
     print("3. Rechercher")
+    print("4. Supprimer")
     print("0. Quitter")
 
 
-
+def ajouter_tache():
+    titre = input("Titre de la tâche : ").strip()
+    if titre == "":
+        print("Erreur : le titre ne peut pas être vide.")
+    else:
+        taches.append(titre)
+        print("Tâche ajoutée avec succès.")
 
 
 def afficher_taches():
@@ -31,6 +38,16 @@ def rechercher_tache():
             trouve = True
     if not trouve:
         print("Aucune tâche trouvée.")
+def supprimer_tache():
+    afficher_taches()
+    if len(taches) == 0:
+        return
+    saisie = input("Numéro de la tâche à supprimer : ").strip()
+    if saisie.isdigit() and 1 <= int(saisie) <= len(taches):
+        supprimee = taches.pop(int(saisie) - 1)
+        print(f"Tâche supprimée : {supprimee}")
+    else:
+        print("Erreur : numéro invalide.")
 
 
 choix = ""
@@ -43,6 +60,8 @@ while choix != "0":
         afficher_taches()
     elif choix == "3":
         rechercher_tache()
+    elif choix == "4":
+        supprimer_tache()
     elif choix == "0":
         print("Au revoir !")
     else:

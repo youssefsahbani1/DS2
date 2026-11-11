@@ -7,6 +7,7 @@ Projet de la matière « Outils collaboratifs avec Git / GitHub » (Licence 1, S
 - Ajouter une tâche (titre vide refusé)
 - Afficher toutes les tâches numérotées (message si la liste est vide)
 - Rechercher une tâche par mot-clé
+-- Supprimer une tâche par son numéro
 - Quitter (toute autre option affiche une erreur)
 
 ## Étapes réalisées
